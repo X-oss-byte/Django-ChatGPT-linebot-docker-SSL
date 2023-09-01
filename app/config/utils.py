@@ -2,6 +2,4 @@
 # And it will change, then you will have to change INTERNAL_IPS again.
 
 def show_toolbar(request):
-    if request.is_ajax():
-        return False
-    return True
+    return not request.is_ajax()
